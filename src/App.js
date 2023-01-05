@@ -1,13 +1,13 @@
 import { Routes, Route } from "react-router-dom";
 import { TodoPage } from "./pages/TodoPage";
-import { LoginPage } from "./pages/LoginPage";
+import { SignIn } from "./pages/SignIn";
 
 export const App = () => {
     return (
         <>
             <Routes>
                 <Route path="/" element={<TodoPage />} />
-                <Route path="login" element={<LoginPage />} />
+                <Route path="login" element={<SignIn />} />
             </Routes>
         </>
     );
