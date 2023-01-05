@@ -1,5 +1,14 @@
-import React from "react";
+import { Routes, Route } from "react-router-dom";
+import { TodoPage } from "./pages/TodoPage";
+import { LoginPage } from "./pages/LoginPage";
 
 export const App = () => {
-    return <div>App</div>;
+    return (
+        <>
+            <Routes>
+                <Route path="/" element={<TodoPage />} />
+                <Route path="login" element={<LoginPage />} />
+            </Routes>
+        </>
+    );
 };
