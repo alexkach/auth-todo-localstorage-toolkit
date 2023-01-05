@@ -22,7 +22,7 @@ export const addNewTodo = createAsyncThunk(
 
             console.log(data);
             dispatch(addTodo(data));
-            throw new Error("Can't add task Server Error");
+            if (!data) throw new Error("Can't add task Server Error");
         } catch ({ messages }) {
             return rejectWithValue(messages);
         }
